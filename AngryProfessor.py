@@ -1,5 +1,4 @@
 test_case = int(input())
-
 for t in range(test_case):
     arrivalCount = 0
     n_k = [int(x) for x in input().split()]
