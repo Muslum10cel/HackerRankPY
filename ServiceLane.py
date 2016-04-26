@@ -6,7 +6,7 @@ for _ in range(T):
     x, y = input().strip().split(" ")
     len = int(y) - int(x) + 1
     bikecount, carcount, truckcount = 0, 0, 0
-    for i in range(int(x), int(y)+1):
+    for i in range(int(x), int(y) + 1):
         if width[i] >= 1:
             bikecount += 1
         if width[i] >= 2:
