@@ -1,7 +1,7 @@
 N = int(input().strip())
 sentence = input().strip()
 K = int(input().strip())
-message = ""
+message = []
 for char in sentence:
     temp = int(ord(char))
     temp1 = K
@@ -13,7 +13,8 @@ for char in sentence:
             if temp == 123:
                 temp = 97
             temp1 -= 1
-        message += chr(temp)
+        message.append(chr(temp))
     else:
-        message += char
-print(message)
+        message.append(char)
+for i in message:
+    print(i, end="")
