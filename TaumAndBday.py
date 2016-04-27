@@ -1,18 +1,6 @@
-T = int(input().strip())
-while T > 0:
-    B, W = input().strip().split(" ")
-    X, Y, Z = input().strip().split(" ")
-    B, W, X, Y, Z = int(B), int(W), int(X), int(Y), int(Z)
-    if Z >= Y and Z >= X:
-        print((B * X) + (W * Y))
-    elif Y >= X:
-        if X + Z >= Y:
-            print((B * X) + (W * Y))
-        else:
-            print((B * X) + W * (X + Z))
-    elif X >= Y:
-        if Y + Z >= X:
-            print((B * X) + (W * Y))
-        else:
-            print(B * (Y + Z) + (W * Y))
-    T -= 1
+for _ in range(int(input().strip())):
+    BW = [int(a) for a in input().strip().split(" ")]
+    XYZ = [int(a) for a in input().strip().split(" ")]
+    forB = min(XYZ[0], (XYZ[1] + XYZ[2]))
+    forW = min(XYZ[1], (XYZ[0] + XYZ[2]))
+    print((BW[0] * forB) + (BW[1] * forW))
