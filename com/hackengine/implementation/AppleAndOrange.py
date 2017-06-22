@@ -1,7 +1,6 @@
 def f(fruits, s, t):
     return sum(map(lambda x, y=0: y + 1 if s <= x <= t else y, fruits))
 
-
 s, t = map(int, input().split(" "))
 a, b = map(int, input().split(" "))
 m, n = map(int, input().split(" "))
