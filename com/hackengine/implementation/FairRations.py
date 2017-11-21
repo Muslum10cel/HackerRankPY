@@ -1,7 +1,6 @@
 def solution(loaves):
     bread = 0
     length = len(loaves)
-
     for i in range(length - 1):
         if loaves[i] % 2 != 0:
             loaves[i + 1] += 1
